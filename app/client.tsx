@@ -1,5 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
+
 
 // export interface User {
 //   _id: string;
@@ -88,7 +92,10 @@ export default function Client() {
   }, []);
 
   if (loading) {
-    return <p className="text-white font-bold text-3xl">Loading <span className="animate-pulse">...</span></p>;
+    return <p className="text-white font-bold text-3xl flex flex-col gap-5">
+      Loading <span className="animate-pulse">...</span>
+      <Skeleton height={20} count={3} />
+    </p>;
   }
 
   return (
