@@ -69,13 +69,13 @@ export default function Client() {
 
   useEffect(() => {
     async function fetchData() {
-      const usersRes = await fetch("http://localhost:3000/api/users", {
+      const usersRes = await fetch("/api/users", {
         cache: "no-store",
       });
       const usersData = await usersRes.json();
 
       const blogRes = await fetch(
-        "http://localhost:3000/api/blogs/693d76fb88c418dcfb570e24?userId=69331953b5cabe3add79b252&categoryId=69389129e915a8321a502609"
+        "/api/blogs/693d76fb88c418dcfb570e24?userId=69331953b5cabe3add79b252&categoryId=69389129e915a8321a502609"
       );
       const blogData = await blogRes.json();
 
