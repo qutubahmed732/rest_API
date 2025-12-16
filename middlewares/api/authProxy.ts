@@ -7,8 +7,8 @@ const validate = (token: any) => {
     return true;
 }
 
-export function authProxy(req: Request) {
+export function authProxy(req: Request): any {
 
     const token = req.headers.get("Authorization")?.split(" ")[1];
     return { isValid: validate(token) };
-}
+};
