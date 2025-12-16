@@ -94,7 +94,7 @@ export default function Client() {
   if (loading) {
     return <p className="text-white font-bold text-3xl flex flex-col gap-5">
       Loading <span className="animate-pulse">...</span>
-      <Skeleton enableAnimation={true} height={20} count={3} />
+      <Skeleton className="animate-pulse" enableAnimation={true} height={20} count={3} />
     </p>;
   }
 
