@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# REST API Project
+
+## Project Purpose
+
+This project is a **REST API** for a Blog Management System. This API provides support for various operations:
+
+- **User Management**: User registration and authentication
+- **Blog Management**: Create, delete, and update blogs
+- **Category Management**: Manage blog categories
+
+## Technologies Used
+
+### Backend Framework
+- **Next.js 16.0.7** - Modern React framework with built-in API routes
+- **Node.js with TypeScript** - Type-safe JavaScript runtime
+
+### Database
+- **MongoDB** - NoSQL database for storing data
+- **Mongoose 9.0.0** - ODM (Object Data Modeling) for MongoDB
+
+### Frontend
+- **React 19.2.0** - UI library
+- **React DOM 19.2.0** - React rendering for web
+
+### Styling
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **PostCSS** - CSS transformation tool
+
+### Development Tools
+- **ESLint** - Code quality and linting
+- **TypeScript 5** - Type-safe JavaScript
+- **Babel** - JavaScript compiler (including React Compiler)
+
+## Project Structure
+
+``
+app/
+ api/
+    (auth)/users/           # User authentication endpoints
+    (dashboard)/
+        blogs/              # Blog CRUD operations
+        categories/         # Category CRUD operations
+ page.tsx                    # Home page
+ layout.tsx                  # App layout
+
+lib/
+ db.ts                       # Database connection
+ modals/
+     user.ts                # User schema
+     blog.ts                # Blog schema
+     category.ts            # Category schema
+``
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
+``ash
+npm install
+``
+
+### Development
+
+``ash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+``
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Server will run on http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build & Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+``ash
+npm run build
+npm start
+``
 
-## Learn More
+### Linting
 
-To learn more about Next.js, take a look at the following resources:
+``ash
+npm run lint
+``
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Endpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Users** - /api/users - User registration and authentication
+- **Blogs** - /api/blogs - Blog listing and management
+- **Categories** - /api/categories - Category management
