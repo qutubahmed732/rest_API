@@ -10,7 +10,6 @@ export default function middleware(request: Request) {
 
     if (request.url.includes("/api/blogs")) {
         const logResult = logProxy(request);
-        console.log(logResult.response)
     }
 
     const authProxyResult = authProxy(request);

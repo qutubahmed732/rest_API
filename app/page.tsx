@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Client from "./client";
-import { NextResponse } from "next/server";
 
 export default function Home() {
 
