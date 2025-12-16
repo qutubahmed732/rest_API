@@ -88,7 +88,7 @@ export default function Client() {
   }, []);
 
   if (loading) {
-    return <p className="text-white font-bold text-3xl">Loading...</p>;
+    return <p className="text-white font-bold text-3xl">Loading <span className="animate-pulse">...</span></p>;
   }
 
   return (
