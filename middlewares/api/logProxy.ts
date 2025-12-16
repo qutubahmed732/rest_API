@@ -1,3 +1,3 @@
-export function logProxy(response: Request) {
-    return { response: response.method + " " + response.url };
+export function logProxy(req: Request): any {
+    return { response: req.method + " " + req.url };
 };
